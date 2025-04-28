@@ -1,37 +1,56 @@
-# Pretend Bank Encoder
+# 🏦 Caesar Cypher App — Pretend Bank Encoder
 
-A simple web application that encodes or decodes pretend bank messages using the Caesar Cipher technique.
+A simple web application that encodes and decodes pretend bank messages using the classic Caesar Cipher encryption technique.
 
-## Features
+Built using **Test Driven Development (TDD)** principles with **Jest** testing framework.
 
-- Accepts a user input message (plain text or encoded).
-- Accepts a numeric key (shift value).
-- Allows user to choose between encoding or decoding.
-- Displays the result on the page.
-- Built using Test Driven Development (TDD) principles with Jest.
-- Red-Green-Refactor cycle followed.
+---
 
-## Technologies Used
+## 📚 Features
+
+- Accepts user input: message, shift key, and action (encode/decode)
+- Encodes plain text into secret bank messages
+- Decodes encrypted messages back into plain text
+- Built with clean JavaScript
+- Responsive dark-themed UI using TailwindCSS
+- Red → Green → Refactor TDD cycle demonstrated with Git commits
+
+---
+
+## 🚀 Technologies Used
 
 - HTML5
-- Styled with TailWindCSS
-- Vanilla JavaScript (ES6)
-- Jest for testing (TDD Framework)
+- TailwindCSS
+- Vanilla JavaScript (ES6+)
+- Jest (JavaScript testing framework)
+- Git + GitHub for version control
 
-## How it Works
+---
 
-The Caesar Cipher shifts each letter of the message by a specified number of positions in the alphabet.
+## 🧪 TDD Testing Workflow
 
-- Encoding shifts the letters **forward** by the key.
-- Decoding shifts the letters **backward** by the key.
-- Non-letter characters (like numbers, spaces, and punctuation) are left unchanged.
+- Initial failing test created (`RED`)
+- Cipher function built to pass the test (`GREEN`)
+- Code cleaned and refactored after passing (`REFACTOR`)
 
-## Project Structure
+Commit history clearly shows TDD cycle!
+
+---
+
+## 🏗️ Project Structure
+
 caesar-cypher-app/
 │
-├── index.html          # User interface
-├── cypher.js            # Cipher logic (encode and decode functions)
-├── cypher.test.js       # Jest test file
-├── package.json         # Project configuration and dependencies
-├── README.md            # Project documentation (this file)
-├── node_modules/        # Installed npm packages
+├── cipher.js          # Cipher encode/decode logic
+├── cipher.test.js     # Jest tests
+├── index.html         # Webpage interface
+├── package.json       # Project setup and dependencies
+├── README.md          # Project documentation
+├── node_modules/      # Installed dependencies (ignored in Git)
+└── .gitignore         # Ignoring unnecessary files like node_modules
+
+## 🙌 Author
+
+Built by [funkmafia](https://github.com/funkmafia)
+
+---
