@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Bank Encoder</title>
+
+  <!-- Import TailwindCSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="min-h-screen bg-gray-900 text-green-400 flex flex-col items-center justify-center p-6">
+
+  <h1 class="text-4xl font-bold mb-6">The Bank Encoder</h1>
+
+  <!-- The Form to collect user input -->
+  <form name="cypher-form" id="cypherForm" class="bg-gray-800 p-6 rounded-lg shadow-lg flex flex-col gap-4 w-full max-w-md">
+
+    <!-- Textarea for user to enter message (plain or coded) -->
+    <label for="message" class="font-semibold">Enter your bank message:</label>
+    <textarea id="message" rows="4" cols="50" placeholder="e.g., Transfer $5000 to Account 12345"
+      class="bg-gray-700 p-3 rounded text-white focus:outline-none focus:ring-2 focus:ring-green-400"></textarea>
+
+    <!-- Input for user to enter secret key (number between 1-25) -->
+    <label for="key" class="font-semibold">Enter your secret key (number):</label>
+    <input type="number" id="key" min="1" max="25" placeholder="e.g., 4"
+      class="bg-gray-700 p-3 rounded text-white focus:outline-none focus:ring-2 focus:ring-green-400" />
+
+    <!-- Select dropdown to choose encode or decode action -->
+    <label for="action" class="font-semibold">Choose an action:</label>
+    <select id="action"
+      class="bg--700 p-3 rounded text-white focus:outline-none focus:ring-2 focus:ring-green-400">
+      <option value="encode">Encode</option>
+      <option value="decode">Decode</option>
+    </select>
+
+    <!-- Submit button to trigger the encoding/decoding -->
+    <button type="submit"
+      class="bg-green-500 hover:bg-green-600 text-black font-bold py-2 px-4 rounded transition-all">
+      Submit
+    </button>
+
+  </form>
+
+  <!-- Section to display the result -->
+  <h2 class="text-2xl font-semibold mt-8">Result:</h2>
+  <p id="result" class="mt-2 text-lg"></p>
+
+  <!-- Link to JavaScript file -->
+  <script src="cypher.js"></script>
+
+</body>
+</html>
