@@ -52,6 +52,7 @@ const messageInput = document.getElementById('message');
 const keyInput = document.getElementById('key');
 const actionSelect = document.getElementById('action');
 const resultParagraph = document.getElementById('result'); 
+const clearBtn = document.getElementById('clear');
 
 // === 2. EVENT LISTENERS === 
 
@@ -71,6 +72,12 @@ const result = cipher(message, key, action);
 resultParagraph.textContent = result;
 }); 
 
+clearBtn.addEventListener('click', function() {
+    messageInput.value = '';
+    keyInput.value = ''; 
+    actionSelect.selectedIndex = 0; 
+    resultParagraph.textContent = ''; 
+}); 
 
 /* NOTES BELOW // 
 
